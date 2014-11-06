@@ -1,0 +1,35 @@
+<div class="clearfix top-space small"></div>
+<div class="row">
+
+  <%= render :partial => 'shared/left_nav' %>
+
+<div class="panel panel-default col-md-8 text-left">
+    <div class="pull-left">
+      <h4>Users</h4>
+    </div>
+    <div class="clearfix"></div>
+    <hr />
+
+  </div>
+  <!--  -->
+    <div class="panel panel-default col-md-8 text-left">
+    <div class="pull-left">
+      <h4>Who's on Twetter?</h4>
+      <p class="text-muted">Twetter accounts in alpabetical order.</p>
+    </div>
+    <div class="clearfix"></div>
+    <hr />
+    <ol class="list-unstyled">
+      <% @users.each do |user| -%>
+      <li>
+      	<!-- This provides a bolded link but the text positioning is a bit off, fix later -->
+         <class="pull-left text-middle"> <strong><%= link_to user.name, user %></strong> </class> 
+        <%= content_tag :span, "@"+user.username, :class => 'text-muted pad-10 text-middle' %>
+        <%= follow_link(user) %>
+        <div class="clearfix"></div>
+      </li>
+      <li><hr></li>
+      <% end -%>
+    </ol>
+  </div>
+</div>

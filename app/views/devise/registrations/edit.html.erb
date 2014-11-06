@@ -1,0 +1,50 @@
+<div class="clearfix top-space"></div>
+<div class="row">
+  <div class="col-md-4 col-md-offset-4 panel panel-default">
+    <div class="pull-left">
+      <h4>Edit My Account</h4>
+    </div>
+    <div class="clearfix"></div>
+    <hr />
+
+    <%= form_for resource, :url => user_registration_path,
+                           :builder => InlineErrorsBuilder,
+                           :method => :put,
+                           :role => :form do |f| %>
+
+      <div>
+        <%= content_tag :div, :class => f.validation_class(:name, "form-group") do %>
+          <%= f.text_field :name, :placeholder => "Full Name", :class => 'form-control', :autofocus => true %>
+          <%= f.errors_for :name %>
+        <% end %>
+
+        <%= content_tag :div, :class => f.validation_class(:username, "form-group") do %>
+          <%= f.text_field :username, :placeholder => "Username", :class => 'form-control', :autofocus => true %>
+          <%= f.errors_for :username %>
+        <% end %>
+
+        <%= content_tag :div, :class => f.validation_class(:email, "form-group") do %>
+          <%= f.text_field :email, :placeholder => "Email", :class => 'form-control', :autofocus => true %>
+          <%= f.errors_for :email %>
+        <% end %>
+
+        <%= content_tag :div, :class => f.validation_class(:password, "form-group") do %>
+          <%= f.password_field :password, :placeholder => "Password (if changing)", :class => 'form-control', :autocomplete => "off" %>
+          <%= f.errors_for :password %>
+        <% end %>
+
+        <%= content_tag :div, :class => f.validation_class(:current_password, "form-group") do %>
+          <%= f.password_field :current_password, :placeholder => "Current Password", :class => 'form-control', :autocomplete => "off" %>
+          <%= f.errors_for :current_password %>
+        <% end %>
+
+
+        <div class="form-group tall">
+          <%= link_to "Back", :back, :class => "btn btn-default pull-left" %>
+          <%= f.submit "Update", :class => "btn btn-warning pull-right" %>
+        </div>
+      </div>
+    <% end %>
+
+  </div>
+</div>
