@@ -51,7 +51,7 @@ group :development, :test do
   # Use Factory Girl for Active Record sample instance object creation: https://github.com/thoughtbot/factory_girl/blob/master/GETTING_STARTED.md
   gem 'factory_girl_rails'
   # Use FFaker for random seed generation: https://github.com/EmmanuelOga/ffaker
-  #gem 'ffaker'
+  gem 'ffaker'
   # Use Shoulda Matchers for validation and association testing: https://github.com/thoughtbot/shoulda-matchers
   gem 'shoulda-matchers'
   # Use sqlite3 as the database for Active Record
