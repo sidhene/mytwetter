@@ -6021,3 +6021,124 @@ Started GET "/assets/twitter_web_sprite_bgs.png" for 127.0.0.1 at 2014-11-06 11:
 
 
 Started GET "/assets/twetter-logo.png" for 127.0.0.1 at 2014-11-06 11:10:45 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-06 13:23:07 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 21 ORDER BY "users"."id" ASC LIMIT 1
+Processing by FollowsController#index as HTML
+  [1m[36m (3.1ms)[0m  [1mSELECT COUNT(*) FROM "twets" WHERE "twets"."user_id" = ?[0m  [["user_id", 21]]
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "follows" WHERE "follows"."user_id" = ?  [["user_id", 21]]
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "follows" WHERE "follows"."following_id" = 21[0m
+  Rendered shared/_left_nav.html.erb (83.2ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" != 21) ORDER BY "users".name ASC
+  [1m[36mFollow Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "follows" WHERE "follows"."user_id" = 21 AND "follows"."following_id" = 5 LIMIT 1[0m
+  [1m[35mFollow Load (0.1ms)[0m  SELECT "follows".* FROM "follows" WHERE "follows"."user_id" = 21 AND "follows"."following_id" = 5 ORDER BY "follows"."id" ASC LIMIT 1
+  [1m[36mFollow Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "follows" WHERE "follows"."user_id" = 21 AND "follows"."following_id" = 11 LIMIT 1[0m
+  [1m[35mFollow Load (0.1ms)[0m  SELECT "follows".* FROM "follows" WHERE "follows"."user_id" = 21 AND "follows"."following_id" = 11 ORDER BY "follows"."id" ASC LIMIT 1
+  [1m[36mFollow Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "follows" WHERE "follows"."user_id" = 21 AND "follows"."following_id" = 18 LIMIT 1[0m
+  [1m[35mFollow Load (0.1ms)[0m  SELECT "follows".* FROM "follows" WHERE "follows"."user_id" = 21 AND "follows"."following_id" = 18 ORDER BY "follows"."id" ASC LIMIT 1
+  [1m[36mFollow Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "follows" WHERE "follows"."user_id" = 21 AND "follows"."following_id" = 8 LIMIT 1[0m
+  [1m[35mFollow Load (0.1ms)[0m  SELECT "follows".* FROM "follows" WHERE "follows"."user_id" = 21 AND "follows"."following_id" = 8 ORDER BY "follows"."id" ASC LIMIT 1
+  [1m[36mFollow Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "follows" WHERE "follows"."user_id" = 21 AND "follows"."following_id" = 6 LIMIT 1[0m
+  [1m[35mFollow Exists (0.2ms)[0m  SELECT 1 AS one FROM "follows" WHERE "follows"."user_id" = 21 AND "follows"."following_id" = 12 LIMIT 1
+  [1m[36mFollow Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "follows" WHERE "follows"."user_id" = 21 AND "follows"."following_id" = 10 LIMIT 1[0m
+  [1m[35mFollow Exists (0.1ms)[0m  SELECT 1 AS one FROM "follows" WHERE "follows"."user_id" = 21 AND "follows"."following_id" = 19 LIMIT 1
+  [1m[36mFollow Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "follows" WHERE "follows"."user_id" = 21 AND "follows"."following_id" = 13 LIMIT 1[0m
+  [1m[35mFollow Exists (0.1ms)[0m  SELECT 1 AS one FROM "follows" WHERE "follows"."user_id" = 21 AND "follows"."following_id" = 9 LIMIT 1
+  [1m[36mFollow Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "follows" WHERE "follows"."user_id" = 21 AND "follows"."following_id" = 17 LIMIT 1[0m
+  [1m[35mFollow Exists (0.1ms)[0m  SELECT 1 AS one FROM "follows" WHERE "follows"."user_id" = 21 AND "follows"."following_id" = 4 LIMIT 1
+  [1m[36mFollow Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "follows" WHERE "follows"."user_id" = 21 AND "follows"."following_id" = 20 LIMIT 1[0m
+  [1m[35mFollow Exists (0.1ms)[0m  SELECT 1 AS one FROM "follows" WHERE "follows"."user_id" = 21 AND "follows"."following_id" = 1 LIMIT 1
+  [1m[36mFollow Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "follows" WHERE "follows"."user_id" = 21 AND "follows"."following_id" = 7 LIMIT 1[0m
+  [1m[35mFollow Exists (0.1ms)[0m  SELECT 1 AS one FROM "follows" WHERE "follows"."user_id" = 21 AND "follows"."following_id" = 2 LIMIT 1
+  [1m[36mFollow Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "follows" WHERE "follows"."user_id" = 21 AND "follows"."following_id" = 16 LIMIT 1[0m
+  [1m[35mFollow Exists (0.1ms)[0m  SELECT 1 AS one FROM "follows" WHERE "follows"."user_id" = 21 AND "follows"."following_id" = 3 LIMIT 1
+  [1m[36mFollow Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "follows" WHERE "follows"."user_id" = 21 AND "follows"."following_id" = 14 LIMIT 1[0m
+  [1m[35mFollow Exists (0.2ms)[0m  SELECT 1 AS one FROM "follows" WHERE "follows"."user_id" = 21 AND "follows"."following_id" = 15 LIMIT 1
+  Rendered follows/index.html.erb within layouts/application (144.7ms)
+Completed 200 OK in 401ms (Views: 385.8ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/assets/follows.js?body=1" for 127.0.0.1 at 2014-11-06 13:23:08 -0800
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-06 13:23:08 -0800
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-06 13:23:08 -0800
+
+
+Started GET "/assets/twets.js?body=1" for 127.0.0.1 at 2014-11-06 13:23:08 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-06 13:23:08 -0800
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-06 13:23:08 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-06 13:23:08 -0800
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-06 13:23:08 -0800
+
+
+Started GET "/assets/follows.css?body=1" for 127.0.0.1 at 2014-11-06 13:23:08 -0800
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-11-06 13:23:08 -0800
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-11-06 13:23:08 -0800
+
+
+Started GET "/assets/twets.css?body=1" for 127.0.0.1 at 2014-11-06 13:23:08 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-06 13:23:08 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-06 13:23:08 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-06 13:23:08 -0800
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-06 13:23:08 -0800
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-06 13:23:08 -0800
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-06 13:23:08 -0800
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-06 13:23:08 -0800
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-06 13:23:08 -0800
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-06 13:23:08 -0800
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-06 13:23:08 -0800
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-06 13:23:08 -0800
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-06 13:23:08 -0800
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-06 13:23:08 -0800
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-06 13:23:08 -0800
+
+
+Started GET "/assets/twitter_web_sprite_bgs.png" for 127.0.0.1 at 2014-11-06 13:23:08 -0800
+
+
+Started GET "/assets/twetter-logo.png" for 127.0.0.1 at 2014-11-06 13:23:08 -0800
