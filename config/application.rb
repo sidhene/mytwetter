@@ -1,7 +1,7 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
-config.serve_static_assets = true
+
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -23,6 +23,7 @@ module Twetter
 
     # By default, Rails wraps form fields with a div.field_with_errors. This messes with the DOM
     # heirarchy so let's remove it: http://bit.ly/1aMUIu2
+    config.serve_static_assets = true
     config.action_view.field_error_proc = Proc.new { |html_tag, instance|
       "#{html_tag}".html_safe
     }
